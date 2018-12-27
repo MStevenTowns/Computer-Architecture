@@ -1,0 +1,38 @@
+Loop:       COPY #1,@MemPtr
+                 ADD #11,MemPtr
+                 JUMP Loop
+MemPtr:  DATA 0
+
+;Attacking Carpetbombing, DoNothing, and Relocate
+;But I win more often than I loose against all 6 programs
+
+;This code will drop 1s in 'random' places on the board, every 11 spaces.
+;My initial idea was to move the entire program through memory, but it took too many instructions and rarely won
+;so instead i took the "carpet bomb" from the examples in CodeBlue Wars.docx and increased the distance
+;I tested a bunch of values before settling on 11
+;The numbers i tried were:
+;1-17
+;primes through 30
+;highest LCM with 1000(grid size)
+;990-1000
+; 11 was one of the numbers that produced the best results
+;12,13,15,29 produced simmilar results
+;To choose the best results i ran the 100 battles about 10 times and then wrote down the wins-losses of a typical set
+;any that do not add up to 100 had ties for the difference
+;These are not exact numbers, but a rough estimate of how my program should do against each of the test programs
+
+;wins-loss
+;Carpet: 68-32
+;DoNothing: 57-43
+;Relocate: 83-17
+;Runner: 7-0
+;SimpleLoop: 13-0
+;SpotBomb: 51-48
+
+;I am sure there is some mathematical way to choose a number, but I wasn't able to determine that for this project
+; Carpet and Relocate were easy to defeat using many numbers, but DoNothing was actually a challenge
+;I had to ensure that my program didn't end up killing iself too soon into the challenge.
+;Runner and SimpleLoop were easy to beat, but often tied
+;SpotBomb uses the same method so it is dificult to beat soundly, and runing the battle 100 times gave an exact result of:
+;MyCode: 5111, SpotBomb: 4822, Ties: 67
+;This means that I win slightly more often than I loose (51 vs 48)

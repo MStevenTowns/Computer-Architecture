@@ -1,0 +1,55 @@
+Components of a Machine
+	Bus
+	Memory
+	CPU
+	I/O
+CPU
+	ALU
+	Control unit
+	Internal bus
+	Cache(potentially)
+CPU
+	Program counter
+	Instruction register
+	Execution unit
+	Registers
+Registers
+	MAR - mem address reg
+	MBR - mem buffer reg
+	IO AR
+	IO BR
+Functions of a computer
+	Storage
+	movement
+	Processing
+	Control
+Elements of assembly
+	Label
+	Mnemonic
+	Operand
+	Comment
+Steps of Instruction Cycle
+	FETCH
+	Decode
+	EXECUTE
+	Storage
+
+
+Computer
+	IO
+	Memory
+	Bus
+	CPU
+		Registers
+		ALU
+		internal Bus
+		Control unit
+			Sequence Logic
+			Control Unit registers
+			Control memory
+	
+Busses
+	System Bus
+		Data Line
+		Address Line
+		Control Line
